@@ -55,7 +55,8 @@ function QrCode({ navigation }) {
         }
       );
       if (!response.ok) {
-        return false;
+        navigation.navigate("Failed", { message: "No such data" });
+        return;
       }
       const json: any = await response.json();
       console.log("here is " + json.result);
@@ -81,6 +82,7 @@ function QrCode({ navigation }) {
         navigation.navigate("Failed", { message: "Result not found" });
       }
     } catch (error) {
+      navigation.navigate("Failed", { message: error });
       console.log(error);
     }
   }

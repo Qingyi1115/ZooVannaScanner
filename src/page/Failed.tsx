@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Entypo } from "@expo/vector-icons";
 
 function Failed({ route, navigation }) {
   const message = route.params.message;
   return (
     <View style={styles.container}>
+      <Entypo name="circle-with-cross" size={100} color="white" />
       <Text style={{ fontSize: 30, color: "white" }}>Failed</Text>
       <Text style={{ fontSize: 30, color: "white" }}>{message}</Text>
     </View>

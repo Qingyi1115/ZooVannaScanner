@@ -60,12 +60,27 @@ function Branch() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{ headerShown: false }}
+        options={{
+          headerShown: false,
+          headerTitleStyle: { backgroundColor: "#f7fdf5" },
+        }}
         name="Code"
         component={QrCode}
       />
-      <Stack.Screen name="Success" component={Success} />
-      <Stack.Screen name="Failed" component={Failed} />
+      <Stack.Screen
+        name="Success"
+        options={{
+          headerTitleStyle: { backgroundColor: "#f7fdf5" },
+        }}
+        component={Success}
+      />
+      <Stack.Screen
+        name="Failed"
+        options={{
+          headerTitleStyle: { backgroundColor: "#f7fdf5" },
+        }}
+        component={Failed}
+      />
     </Stack.Navigator>
   );
 }
