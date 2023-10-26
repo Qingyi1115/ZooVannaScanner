@@ -4,7 +4,7 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 import { Camera } from "expo-camera";
 import React, { useEffect, useState } from "react";
 import { LOCALHOST_3000_ADDRESS } from "@env";
-const localhost_address = LOCALHOST_3000_ADDRESS;
+const localhost_address = "172.31.11.246:3000";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { NavigationContainer } from "@react-navigation/native";
@@ -82,7 +82,7 @@ function QrCode({ navigation }) {
         navigation.navigate("Failed", { message: "Result not found" });
       }
     } catch (error) {
-      navigation.navigate("Failed", { message: error });
+      navigation.navigate("Failed", { message: error.message });
       console.log(error);
     }
   }

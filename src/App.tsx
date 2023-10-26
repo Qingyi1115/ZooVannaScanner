@@ -110,21 +110,14 @@ function App() {
                 {() => <Root updateUser={updateUser} />}
               </Stack.Screen>
 
-              <Stack.Screen
-                name="Logout"
-                component={() => (
-                  <Logout {...useNavigation()} updateUser={updateUser} />
-                )}
-              />
+              <Stack.Screen name="Logout">
+                {() => <Logout {...useNavigation()} updateUser={updateUser} />}
+              </Stack.Screen>
             </>
           ) : (
-            <Stack.Screen
-              name="Login"
-              options={{ headerShown: false }}
-              component={() => (
-                <Login {...useNavigation()} updateUser={updateUser} />
-              )}
-            />
+            <Stack.Screen name="Login" options={{ headerShown: false }}>
+              {() => <Login {...useNavigation()} updateUser={updateUser} />}
+            </Stack.Screen>
           )}
 
           {/* Add more screens here */}
