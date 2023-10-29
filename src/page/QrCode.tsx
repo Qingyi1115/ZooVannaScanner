@@ -4,7 +4,7 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 import { Camera } from "expo-camera";
 import React, { useEffect, useState } from "react";
 import { LOCALHOST_3000_ADDRESS } from "@env";
-const localhost_address = "LOCALHOST_3000_ADDRESS";
+const localhost_address = LOCALHOST_3000_ADDRESS;
 import { Provider, useSelector, useDispatch } from "react-redux";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { NavigationContainer } from "@react-navigation/native";
@@ -45,6 +45,7 @@ function QrCode({ navigation }) {
     const now = new Date(Date.now());
     now.setHours(0, 0, 0);
     console.log(data);
+    console.log(localhost_address);
 
     try {
       const response = await fetch(
