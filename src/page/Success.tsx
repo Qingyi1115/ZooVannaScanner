@@ -1,6 +1,5 @@
-import { ParamListBase, RouteProp, useRoute } from "@react-navigation/native";
-import { StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { StyleSheet, Text, View } from "react-native";
 
 function Success({ route, navigation }) {
   const result = route.params.result;

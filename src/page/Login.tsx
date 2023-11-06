@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import * as Form from "@radix-ui/react-form";
-import useLogin from "../hooks/useLogin";
-import { Button, TextInput, View, StyleSheet, Text } from "react-native";
+import { useState } from "react";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import useLogin from "../hooks/useLogin";
 
 function Login({ navigation, updateUser }) {
   const [email, setEmail] = useState<string>("");

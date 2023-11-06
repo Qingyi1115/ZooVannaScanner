@@ -1,9 +1,8 @@
-import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
-import { useDispatch } from "react-redux";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { logout as dispatchLogOut } from "../context/context";
+import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useDispatch } from "react-redux";
+import { logout as dispatchLogOut } from "../context/context";
 
 const Logout = ({ navigation, updateUser }) => {
   const dispatch = useDispatch();

@@ -1,11 +1,7 @@
-import { Button, StyleSheet, Text, View } from "react-native";
-import Login from "./Login";
-import Logout from "./Logout";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { logout as dispatchLogOut } from "../context/context";
+import { useEffect, useState } from "react";
+import { Button, StyleSheet, View } from "react-native";
 import { useDispatch } from "react-redux";
 
 const Setting = ({ navigation }) => {

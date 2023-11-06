@@ -1,14 +1,8 @@
-import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, Text, Vibration, View } from "react-native";
-import { BarCodeScanner } from "expo-barcode-scanner";
-import { Camera } from "expo-camera";
-import React, { useEffect, useState } from "react";
 import { LOCALHOST_3000_ADDRESS } from "@env";
+import { BarCodeScanner } from "expo-barcode-scanner";
+import { useEffect, useState } from "react";
+import { StyleSheet, Text, Vibration, View } from "react-native";
 const localhost_address = LOCALHOST_3000_ADDRESS;
-import { Provider, useSelector, useDispatch } from "react-redux";
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
 function QrCode({ navigation }) {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);

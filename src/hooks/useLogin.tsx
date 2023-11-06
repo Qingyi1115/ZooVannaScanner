@@ -1,9 +1,9 @@
+import { LOCALHOST_3000_ADDRESS } from "@env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { LOCALHOST_3000_ADDRESS } from "@env";
-const localhost_address = LOCALHOST_3000_ADDRESS;
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { login as dispatchLogin } from "../context/context";
+const localhost_address = LOCALHOST_3000_ADDRESS;
 
 // import User from "../models/User";
 
