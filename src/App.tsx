@@ -1,27 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { BarCodeScanner } from "expo-barcode-scanner";
-import { Camera } from "expo-camera";
-import { useEffect, useState } from "react";
-import { Provider, useSelector, useDispatch } from "react-redux";
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "./page/Login";
+import { useEffect, useState } from "react";
+import { StyleSheet } from "react-native";
+import { Provider } from "react-redux";
 import store from "./context";
-import tailwind from "tailwind-rn";
-import QrCode from "./page/QrCode";
-import { connect } from "react-redux";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import Logout from "./page/Logout";
-import { RootState } from "./context";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Setting from "./page/Setting";
-import Success from "./page/Success";
 import Failed from "./page/Failed";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
+import Login from "./page/Login";
+import Logout from "./page/Logout";
+import QrCode from "./page/QrCode";
+import Success from "./page/Success";
 
 const Stack = createStackNavigator();
 
