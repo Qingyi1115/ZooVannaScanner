@@ -21,11 +21,16 @@ import Success from "./page/Success";
 import Failed from "./page/Failed";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
 
 const Stack = createStackNavigator();
 
 function Root({ updateUser }) {
   const Tab = createBottomTabNavigator();
+  const [fontsLoaded] = useFonts({
+    Helvetica: require("../assets/fonts/Helvetica.ttf"),
+    "Inter-Regular": require("../assets/fonts/Inter-Regular.otf"),
+  });
   return (
     <Tab.Navigator>
       <Tab.Screen

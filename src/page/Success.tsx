@@ -7,6 +7,16 @@ function Success({ route, navigation }) {
   console.log(result.listing.price);
   return (
     <View style={styles.container}>
+      {result.isRedeemed > 1 && (
+        <Text
+          style={{
+            fontSize: 25,
+            color: "#E7E012",
+          }}
+        >
+          Warning: Re-entry: {result.isRedeemed - 1} time(s)
+        </Text>
+      )}
       <Ionicons name="md-checkmark-circle" size={100} color="white" />
       <Text style={{ fontSize: 30, color: "white" }}>
         {result.listing.listingType}
